@@ -1,0 +1,13 @@
+version: '2'
+services:
+  db.postgres:
+    container_name: db.postgres
+    image: postgres:10
+    environment:
+      - POSTGRES_USER=mellolian
+      - POSTGRES_PASSWORD=drowssap
+      - POSTGRES_DB=test
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
